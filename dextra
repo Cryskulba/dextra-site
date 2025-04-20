@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dextra - Destrave seu próximo nível</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      #mobile-menu {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <h1 class="text-2xl font-bold text-indigo-600">Dextra</h1>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#" class="hover:text-indigo-600">Início</a>
+      <a href="#sobre" class="hover:text-indigo-600">Sobre</a>
+      <a href="#cursos" class="hover:text-indigo-600">Cursos</a>
+      <a href="#trilhas" class="hover:text-indigo-600">Trilhas</a>
+      <a href="#suporte" class="hover:text-indigo-600">Suporte</a>
+      <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Entrar</a>
+    </nav>
+    <div id="mobile-menu" class="md:hidden">
+      <button id="menu-button" class="text-indigo-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-4 bg-gray-50">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Destrave seu próximo nível.</h2>
+    <p class="text-lg md:text-xl mb-6">Cursos online práticos em tecnologia e marketing digital para quem quer aprender e agir.</p>
+    <div class="space-y-3 md:space-x-4 md:space-y-0">
+      <a href="#cursos" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Ver cursos</a>
+      <a href="#" class="inline-block border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-100">Comece agora</a>
+    </div>
+  </section>
+
+  <footer class="py-10 bg-gray-900 text-gray-400 text-center text-sm px-4">
+    <p>&copy; 2025 Dextra. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const dropdown = document.getElementById('dropdown');
+    if (menuButton && dropdown) {
+      menuButton.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>
